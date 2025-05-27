@@ -30,5 +30,8 @@ export class HomePage implements OnInit {
     await supabase.auth.signOut();
     this.router.navigate(['/auth'])
   }
+  async irAlChat(){
+    this.router.navigate(['/chat'])
+  }
 
 }

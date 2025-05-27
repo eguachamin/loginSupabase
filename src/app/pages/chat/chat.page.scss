@@ -1,0 +1,80 @@
+/* Título principal */
+ion-title {
+  font-size: 2.2rem; /* más grande */
+  font-weight: 900;
+  color: #ffca28; /* amarillo Pokémon */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Botones en header y footer */
+ion-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  --background: #ffca28; /* amarillo */
+  --color: #212121; /* texto oscuro */
+  --padding-start: 20px;
+  --padding-end: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+ion-button:hover {
+  --background: #f9a825; /* amarillo oscuro al hover */
+}
+
+/* Botón en el header (cerrar sesión) */
+ion-toolbar ion-buttons ion-button {
+  --background: transparent;
+  --color: #ffca28;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 0 8px;
+}
+
+/* Inputs y lista */
+ion-input {
+  font-size: 1.1rem;
+}
+
+ion-list ion-item ion-label strong {
+  font-size: 1.1rem;
+  color: #1976d2; /* azul Pokémon */
+}
+
+/* Mensajes */
+ion-list ion-item ion-label p {
+  font-size: 0.95rem;
+  color: #424242;
+}
+.chat-background {
+  --background: none;
+  background: url('/assets/pokemon-pikachu-wallpaper-preview.jpg') no-repeat center center / cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa oscura para mejorar la lectura */
+.chat-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* capa semitransparente */
+  z-index: 0;
+}
+
+/* Asegura que el contenido esté por encima */
+.chat-background > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Opcional: mejora visibilidad del texto */
+ion-list ion-item ion-label strong,
+ion-list ion-item ion-label p {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+

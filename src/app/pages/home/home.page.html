@@ -1,12 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <p>Bienvenido: {{email}}</p>
-  <ion-button expand="full" color = "danger" (click)="logout()">Cerrar Sesión</ion-button>
+  <p class="welcome-text">Bienvenido: <strong>{{email}}</strong></p>
+
+  <ion-button expand="full" color="danger" fill="solid" shape="round" (click)="logout()">
+    Cerrar Sesión
+  </ion-button>
+
+  <ion-button expand="full" color="primary" fill="solid" shape="round" (click)="irAlChat()">
+    Ir al Chat
+  </ion-button>
 </ion-content>
-
-

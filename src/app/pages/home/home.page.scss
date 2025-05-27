@@ -1,0 +1,75 @@
+/* Fondo con imagen desde assets */
+ion-content {
+  --background: none;
+  background: url('/assets/wallpaper-pokemon1.jpg') no-repeat center center / cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa oscura para mejor contraste */
+ion-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* capa semitransparente */
+  z-index: 0;
+}
+
+/* Asegurar que el contenido esté sobre la capa oscura */
+ion-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título */
+ion-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #071cd6;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Texto de bienvenida */
+.welcome-text {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Botones con bordes redondeados y sombra */
+ion-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 14px 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Botón Cerrar Sesión */
+ion-button[color="danger"] {
+  --background: #eb445a;
+  --color: white;
+}
+
+ion-button[color="danger"]:hover {
+  --background: #c91f37;
+  box-shadow: 0 6px 16px rgba(201, 31, 55, 0.6);
+}
+
+/* Botón Ir al Chat */
+ion-button[color="primary"] {
+  --background: #3880ff;
+  --color: white;
+}
+
+ion-button[color="primary"]:hover {
+  --background: #2962ff;
+  box-shadow: 0 6px 16px rgba(41, 98, 255, 0.6);
+}
